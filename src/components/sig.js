@@ -10,14 +10,14 @@ export default function SIG() {
     <section id="home-section">
       <h1 className="heading">Our SIG's</h1>
       <div className="container">
-        <div class="row no-gutters sigs mb-3">
+        <div className="row no-gutters sigs mb-3">
           <div
-            class="col-lg-6 text-white showcase-img sig-img"
+            className="col-lg-6 text-white showcase-img sig-img"
             style={{ backgroundImage: `url(${algoImg})` }}
           ></div>
-          <div class="sig-details col-lg-6 order-lg-1  showcase-text">
+          <div className="sig-details col-lg-6 order-lg-1  showcase-text">
             <h2>Algorithms Group</h2>
-            <p class="lead mb-0">
+            <p className="lead mb-0">
               We are a group of coding enthusiasts whose aim is to promote
               Competitive Programming culture at NITK. As part of this mission,
               we conduct many workshops and contests related to CP. We also
@@ -29,14 +29,14 @@ export default function SIG() {
           </div>
         </div>
 
-        <div class="row no-gutters sigs mb-3">
+        <div className="row no-gutters sigs mb-3">
           <div
-            class="col-lg-6 order-lg-2 text-white showcase-img sig-img"
+            className="col-lg-6 order-lg-2 text-white showcase-img sig-img"
             style={{ backgroundImage: `url(${devImg})` }}
           ></div>
-          <div class="sig-details col-lg-6 order-lg-1  showcase-text">
+          <div className="sig-details col-lg-6 order-lg-1  showcase-text">
             <h2>Development Group (DSC)</h2>
-            <p class="lead mb-0">
+            <p className="lead mb-0">
               We focus on helping students bridge the gap between theory and
               practice in software development. Students grow their knowledge in
               a peer-to-peer learning environment while building solutions to
@@ -48,14 +48,14 @@ export default function SIG() {
           </div>
         </div>
 
-        <div class="row no-gutters sigs mb-3">
+        <div className="row no-gutters sigs mb-3">
           <div
-            class="col-lg-6 text-white showcase-img sig-img"
+            className="col-lg-6 text-white showcase-img sig-img"
             style={{ backgroundImage: `url(${intelligenceImg})` }}
           ></div>
-          <div class="sig-details col-lg-6 order-lg-1  showcase-text">
+          <div className="sig-details col-lg-6 order-lg-1  showcase-text">
             <h2>Intelligence Group</h2>
-            <p class="lead mb-0">
+            <p className="lead mb-0">
               We focus on understanding human intelligence and applying it to
               machines for the benefit of humanity. We explore the domains of
               Machine Learning (ML) and Artificial Intelligence (AI), focusing
@@ -68,14 +68,14 @@ export default function SIG() {
           </div>
         </div>
 
-        <div class="row no-gutters sigs">
+        <div className="row no-gutters sigs">
           <div
-            class="col-lg-6 order-lg-2 text-white showcase-img sig-img"
+            className="col-lg-6 order-lg-2 text-white showcase-img sig-img"
             style={{ backgroundImage: `url(${systemsImg})` }}
           ></div>
-          <div class="sig-details col-lg-6 order-lg-1  showcase-text">
+          <div className="sig-details col-lg-6 order-lg-1  showcase-text">
             <h2>Systems & Security Group</h2>
-            <p class="lead mb-0">
+            <p className="lead mb-0">
               We are group of motivated, passionate students who are interested
               in exploring the various avenues of computer systems . The Systems
               and Security SIG deals with a broad range of domains including
