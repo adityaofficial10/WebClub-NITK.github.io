@@ -1,17 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "../../styles/eventCard.css";
+const ReactMarkdown = require('react-markdown');
 
 export default function EventCard(props) {
-  const description = (
-    <p className="txt">
-      {`${props.description}`
-        .split('\n')
-        .map((paragraph, idx) =>
-          <Fragment key={idx}>
-            {paragraph}<br />
-          </Fragment>)}
-    </p>
-  );
   const imageUrl = `url(${props.image})`;
   return (
     <article className={"EventCard mix " + props.classs}>
@@ -24,7 +15,7 @@ export default function EventCard(props) {
         </h2>
         <h3 className="detail">{props.date}</h3>
         <h3 className="detail"> {props.venue}</h3>
-        {description}
+        <p className="txt">{<ReactMarkdown children={props.description} />}</p>
         </div>
         {props.extras && <a className="details" target="_blank" href={props.extras} rel="noreferrer noopener">More Info</a>}
       </div>

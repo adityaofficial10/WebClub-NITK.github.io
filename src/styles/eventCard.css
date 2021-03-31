@@ -1,6 +1,6 @@
 .EventCard {
   width: 350px;
-  height: 450px;
+  height: 470px;
   border-radius: 3px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -8,7 +8,7 @@
 }
 .EventCard .thumb {
   width: auto;
-  height: 320px;
+  height: 350px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,14 +16,14 @@
 }
 .EventCard .infos {
   width: auto;
-  height: 450px;
+  height: 470px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px 24px;
   background: #fff;
-  transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  transition: 0.6s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03); 
 }
 .EventCard .title {
   padding-right: 40px;
@@ -98,8 +98,8 @@
   max-height: 7.5em;
 }
 .EventCard:hover .infos {
-  -webkit-transform: translateY(-320px);
-  transform: translateY(-320px);
+  -webkit-transform: translateY(-350px);
+  transform: translateY(-350px);
 }
 
 .EventCard:hover .infos {
@@ -137,15 +137,15 @@
 @media screen and (max-width: 600px) {
   .EventCard {
     width: 300px;
-    height: 420px;
+    height: 440px;
     font-size: 15px;
   }
   .EventCard .thumb {
-    height: 280px;
+    height: 300px;
   }
 
   .EventCard .infos {
-    height: 420px;
+    height: 440px;
   }
   .EventCard .infos .title {
     margin: 13px 0;
@@ -161,7 +161,7 @@
   }
 
   .EventCard:hover .infos {
-    -webkit-transform: translateY(-280px);
-    transform: translateY(-280px);
+    -webkit-transform: translateY(-300px);
+    transform: translateY(-300px);
   }
 }
