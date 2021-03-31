@@ -71,6 +71,13 @@ and limitations under the License.
  * LICENSE file in the root directory of this source tree.
  */
 
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
 /**
  * A better abstraction over CSS.
  *
