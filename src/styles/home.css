@@ -39,7 +39,6 @@ h1.main-text {
   align-items: center;
   overflow: hidden;
 }
-
 .title-container {
   margin-left: 100px;
 }
@@ -47,6 +46,7 @@ h1.main-text {
 .bg-image {
   margin-left: 20%;
 }
+
 @media (max-width: 768px) {
   .main-image {
     height: 50vh;

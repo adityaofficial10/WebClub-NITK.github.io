@@ -1,0 +1,24 @@
+#main_container{
+    min-height: 500px;
+    padding: 32px 16px;
+}
+#main_container img{
+    width: 100%;
+    display: block;
+    max-width: 800px;    
+    margin: 2rem auto;
+}
+#main_container .text{
+    color: #1490e4;
+    display: block;
+    font-weight: 600;
+    padding: 1rem 0 0 0;
+    text-align: center;
+    font-size:1.5rem;
+    text-transform: capitalize;
+}
+@media screen and (min-width:900px){
+    #main_container{
+        min-height: 750px;
+    }
+}

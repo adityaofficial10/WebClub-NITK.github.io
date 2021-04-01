@@ -84,6 +84,9 @@ const Nav = (props) => {
           {/* <Link to="/timeline" style={linkStyle}>
             Timeline
           </Link> */}
+          {/* <Link to="/blog" style={linkStyle}>
+            Blogs
+          </Link> */}
         </div>
       </div>
     </div>
