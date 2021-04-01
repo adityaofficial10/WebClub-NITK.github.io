@@ -3,11 +3,12 @@ import axios from 'axios';
 // import { membersWorkSheetId } from '../environment'
 // import Noty from 'noty'
 import mynoty from '../components/mynoty'
+import UrlApi from './UrlApi';
 
 class AuthApi {
     async login(data) {
         var login_status = false;
-        await axios.post(process.env.REACT_APP_BACKEND_URL + '/googlelogin',
+        await axios.post(UrlApi.getBackend() + '/googlelogin',
             {
                 token: data.token
             })
@@ -39,7 +40,7 @@ class AuthApi {
         if (token === null || token === undefined) {
             return false;
         } else {
-            await axios.post(process.env.REACT_APP_BACKEND_URL + '/googlelogin', { token: token })
+            await axios.post(UrlApi.getBackend()+ '/googlelogin', { token: token })
                 .then((res) => {
                     if (res.status === 200) {
                         login = true

@@ -1,8 +1,10 @@
 import axios from 'axios';
 import jssoup from 'jssoup';
 import mynoty from '../components/mynoty'
+import UrlApi from './UrlApi'
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";// these two lines are of no use but me be used when we try to send csrf_token with post requset
 axios.defaults.xsrfCookieName = "XCSRF-TOKEN";//csrf_token
+
 
 class BlogApi {
   async postBlog(url, data, blog_id) {
@@ -101,18 +103,18 @@ class BlogApi {
     return res_;
   }
   async loadBlogWithId(blogid) { //loading specific blog
-    let res = await fetch(process.env.REACT_APP_BACKEND_URL + '/getblogs/' + blogid)
+    let res = await fetch(UrlApi.getBackend()+ '/getblogs/' + blogid)
     res = await res.json()
     return res
   }
   async loadBlogs() {
-    let res = await fetch(process.env.REACT_APP_BACKEND_URL + '/getblogs'); //loading all blog with headding and sample text(main content of blog is not loaded here)
+    let res = await fetch(UrlApi.getBackend()+ '/getblogs'); //loading all blog with headding and sample text(main content of blog is not loaded here)
     res = await res.json()
     return res;
   }
   async deleteBlog(id) {
     let res_status = false;
-    await axios.delete(process.env.REACT_APP_BACKEND_URL + '/deleteblog',{ data: { id:id,token:await localStorage.getItem('token') }})
+    await axios.delete(UrlApi.getBackend()+ '/deleteblog',{ data: { id:id,token:await localStorage.getItem('token') }})
       .then((res) => {
         if (res.status === 200) {
           mynoty.show(res.data, 1);
