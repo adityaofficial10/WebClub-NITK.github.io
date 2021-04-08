@@ -7,11 +7,16 @@ import Nav from "../Nav/Nav";
 // import { data } from 'jquery';
 import BlogApi from "../../_services/BlogApi";
 import queryString from 'query-string';
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import mynoty from './../../components/mynoty'
 import UrlApi from './../../_services/UrlApi'
 import 'react-quill/dist/quill.snow.css';
 import imageUrl from "../../../src/assets/images/devices.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+   faArrowLeft
+  } from "@fortawesome/free-solid-svg-icons";
+
 class Editor extends React.Component {
     constructor(props) {
         super(props)
@@ -102,7 +107,12 @@ class Editor extends React.Component {
                     />
                     <div style={{ background: 'white' }} className="p-2">
                         <div style={{ maxWidth: '800px' }} className="mx-auto"  >
-                            <button className="my-btn border-0" ref={this.publishButton} onClick={this.postBlog} >Publish</button>
+                            <button className="my-btn border-10" ref={this.publishButton} onClick={this.postBlog} >Publish</button>
+                            <Link to="/blog">
+                              <button className="my-btn border-10" type="button">
+                              <FontAwesomeIcon icon={faArrowLeft} /> Back
+                              </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
