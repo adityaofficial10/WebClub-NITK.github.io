@@ -6,7 +6,12 @@ import Helmet from "react-helmet";
 import BlogApi from "../../_services/BlogApi";
 import queryString from 'query-string';
 import Loader from "react-loader-spinner";
-import { Link, Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+   faArrowLeft
+  } from "@fortawesome/free-solid-svg-icons";
 import {
     FacebookShareButton,
     // LinkedinShareButton,
@@ -51,6 +56,7 @@ class BlogDisplay extends Component {
             let temp = <div className="container-fluid bg-light pb-5 ql-snow " style={{ paddingTop: '60px', minHeight: '500px' }}>
                 <div style={{ maxWidth: '1000px' }} className="mx-auto ql-editor">
                     <p className="blog-heading pt-5" ref={this.htmlHeading}></p>
+                    <Button variant="outline-primary" style = {{float:"right", textDecoration:"none"}} href = "/#/blog"><FontAwesomeIcon icon={faArrowLeft} /> Back</Button>
                     <p className="posted-on">Posted on: {res.date} by-<span>{res.writer}</span></p>
                     <p className="pb-2"><b>Introduction</b></p>
                     <p ref={this.htmlSampleText}></p>
