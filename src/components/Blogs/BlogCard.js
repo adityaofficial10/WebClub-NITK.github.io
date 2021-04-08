@@ -16,7 +16,7 @@ class BlogCard extends Component {
         // this.htmlHeading.current.innerHTML = this.props.heading;
         let counter = 0;
         let htmlTagList = this.props.tagList.map(element => {
-            return <li className="list-inline-item" key={counter++} style={{ background: this.props.color }}>{element}</li>
+            return <li className="list-inline-item" key={counter++} style={{ background: this.props.color, marginBottom:"8px" }}>{element}</li>
         })
         let temp_heading = this.props.heading;
         temp_heading = temp_heading.replace(/\s+/g, ' ');
